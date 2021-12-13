@@ -129,11 +129,12 @@ app.controller('billController', ['$scope', function($scope) {
     $scope.price=[]
     $scope.size=[]
     $scope.calc=[]
-
-
-
-
-   
-
-
+    $scope.sum=0
+    $scope.calcsum= function(){
+       sum =  document.querySelectorAll('.calc')
+       for (const item of sum) {
+        $scope.sum = item.value - '' +   $scope.sum   
+       }
+        
+    }
 }]);
