@@ -45,13 +45,13 @@ body{
 }
 .view_coffee{
     margin: 12px 0;
-    height: 120px;
+    height: 180px;
 }
 .coffee_img{
     width: calc( 100% - 8px );
 }
 .coffee{
-    height: 200px;
+    height: 260px;
     cursor: pointer;
     margin-bottom: 12px;
 }

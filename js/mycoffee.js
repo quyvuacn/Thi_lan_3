@@ -104,6 +104,81 @@ const model = {
              },
             ]
         },
+        {
+            coffee_name:'Cà phê 4',
+            option:[
+                {
+                    size:1,
+                    price:25000,
+                    quantily:0,
+                },
+                {
+                 size:2,
+                 price:30000,
+                 quantily:0,
+             },
+             {
+                 size:3,
+                 price:35000,
+                 quantily:0,
+             },
+             {
+                 size:4,
+                 price:40000,
+                 quantily:0,
+             },
+            ]
+        },
+        {
+            coffee_name:'Cà phê 5',
+            option:[
+                {
+                    size:1,
+                    price:25000,
+                    quantily:0,
+                },
+                {
+                 size:2,
+                 price:30000,
+                 quantily:0,
+             },
+             {
+                 size:3,
+                 price:35000,
+                 quantily:0,
+             },
+             {
+                 size:4,
+                 price:40000,
+                 quantily:0,
+             },
+            ]
+        },
+        {
+            coffee_name:'Cà phê 6',
+            option:[
+                {
+                    size:1,
+                    price:25000,
+                    quantily:0,
+                },
+                {
+                 size:2,
+                 price:30000,
+                 quantily:0,
+             },
+             {
+                 size:3,
+                 price:35000,
+                 quantily:0,
+             },
+             {
+                 size:4,
+                 price:40000,
+                 quantily:0,
+             },
+            ]
+        },
     ]
  
 }
