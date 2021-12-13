@@ -128,7 +128,9 @@ app.controller('billController', ['$scope', function($scope) {
     $scope.quantily=[]
     $scope.price=[]
     $scope.size=[]
-   $scope.calc=[]
+    $scope.calc=[]
+
+
 
 
    
