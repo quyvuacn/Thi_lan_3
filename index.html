@@ -1,1 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Đặt hàng cà phê</title>
+    <script src="https://code.jquery.com/jquery-3.6.0.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.8.2/angular.min.js"></script>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="/css/main.css">
+</head>
+<body ng-app="myCoffee">
+    <div class="alert alert-success d-none">
+       Thêm vào bill thành công !
+      </div>
+    <div class="container">
+        <div class="row">
+          <div class="menu">
+              <div ng-controller="headerController" class="header_menu">
+                    <div ng-click="renderMenu()" class="item_header item_menu active">
+                        <a class="menu_link" href="#">Thực đơn</a>
+                    </div>
+                    <div ng-click="renderBill()" class="item_header item_bill">
+                        <a class="menu_link" href="#">Hóa đơn</a>
+                    </div>
+                </div>
+               
+                    <div ng-controller="menuController" class="container content_menu mt-4 ">
 
+                        <div class="row">
+                        <div ng-repeat="item in coffee"  class="col-2 coffee">
+                            <div  ng-click="check($index)">
+                                <div class="view_coffee">
+                                    <img class="coffee_img" src="/img/cofee1.jpg" alt="">
+                                </div>
+                                <div class="coffee_name">
+                                        <a href="#">{{item.coffee_name}}</a>
+                                </div>
+                                <div class="coffee_price">
+                                        <a href="#">{{item.option[0].price}}</a>
+                                </div>
+
+                            </div>
+                            
+                        </div>
+                        </div>
+                    </div>
+                    <div ng-controller="billController" class="container mt-4 content_bill d-none">
+                    <table class="table">
+                        <thead class="thead-dark">
+                            <tr>
+                                <th>Tên sản phẩm</th>
+                                <th>Size</th>
+                                <th>Số lượng</th>     
+                                <th>Giá tiền</th>
+                                <th>Tổng tiền</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr ng-repeat="item in bill">
+                                
+                                <td>{{item.coffee_name}}</td>                      
+                                <td>
+                                    <input ng-model="size[$index]" type="number" max="3" min="1">
+                                </td>
+                                <td><input ng-model="quantily[$index]" type="number"></td>
+                                <td >
+                                    <input class="price" ng-model="price[$index]" type="number" value="{{item.option[size[$index]].price}}" disabled>     
+                                </td>
+                                <td class="calc" ng-model="calc[$index]">
+                                    <input class="price" ng-model="calc[$index]" type="number" value="{{item.option[size[$index]].price * quantily[$index]}}" disabled>               
+                                </td>
+                            </tr>
+                        </tbody>
+                        <tfoot>
+                            <tr>
+                                <td>Tổng tiền</td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                             
+                                <td> <input class="price" ng-model="sum" type="number" value="{{}}" disabled></td>
+                            </tr>
+                        </tfoot>
+                      
+                    </table>
+                    </div>
+
+              
+              
+
+          </div>
+       
+        </div>
+    </div>
+    
+
+
+
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="./js/mycoffee.js"></script>
+
+
+</body>
+</html>

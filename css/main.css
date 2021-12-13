@@ -1,0 +1,72 @@
+*{
+    font-family: sans-serif;
+}
+a{
+    text-decoration: none;
+}
+.alert{
+    position: absolute;
+    right: 120px;
+    top: 9px;
+    font-size: 12px;
+    padding: 4px;
+}
+body{
+    background-color: rgba(255, 255, 255, 0.952);
+}
+.header_menu{
+    background-color: #0191da;
+    height: 48px;
+    display: flex;
+    align-items: flex-end;
+    padding: 0 4px;
+}
+.item_header{
+   min-width: 84px;
+   text-align: center;
+   margin-right: 12px;
+   height: 44px;
+   display: flex;
+   align-items: center;
+}
+.item_header_menu a{
+    margin: 0 auto;
+}
+.menu_link{
+    color: white;
+    margin: 0 auto;
+}
+.active{
+    background-color: white;
+    border-radius: 3px 3px 0 0 ;
+}
+.active a{
+    color: #000;
+}
+.view_coffee{
+    margin: 12px 0;
+    height: 120px;
+}
+.coffee_img{
+    width: calc( 100% - 8px );
+}
+.coffee{
+    height: 200px;
+    cursor: pointer;
+    margin-bottom: 12px;
+}
+.coffee:hover{
+    background-color: white;
+    box-shadow: rgb(0 0 0 / 10%) 0px 0px 20px;
+}
+tfoot tr {
+    margin-left: auto;
+}
+input{
+    width: 40px;
+}
+.price,.calc{
+    width: auto;
+    border: none;
+    background-color: white;
+}
